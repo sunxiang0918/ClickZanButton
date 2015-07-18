@@ -39,7 +39,20 @@ class ZanButton: UIView{
     //是否已点赞
     var isZan = false
     
-    var zanNumber = 0      //赞的数量
+    //初始化赞的数量
+    var initNumber:Int {
+        
+        get {
+            return zanNumber
+        }
+        
+        set{
+            zanNumber = newValue
+            self.numberView.value = zanNumber
+        }
+    }
+    
+    private var zanNumber = 0      //赞的数量
     
     //PopView的高度
     var popHeight:Float = 20.0
