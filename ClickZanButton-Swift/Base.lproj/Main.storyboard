@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClickZanButton_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qg-8e-v8e" customClass="ZanButton" customModule="ClickZanButton_Swift" customModuleProvider="target">
+                                <rect key="frame" x="255" y="273" width="91" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scm-AZ-94b">
+                                        <rect key="frame" x="41" y="8" width="33" height="16"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="FGG-Oe-BAb"/>
+                                    <constraint firstAttribute="width" constant="91" id="pQ9-ld-3nf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-uU-ixe" customClass="NumberScrollAnimatedView" customModule="ClickZanButton_Swift" customModuleProvider="target">
+                                <rect key="frame" x="180" y="28" width="240" height="47"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="SCm-mQ-k4B"/>
+                                    <constraint firstAttribute="width" constant="240" id="rQq-e6-dPC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-fV-28K">
+                                <rect key="frame" x="271" y="109" width="57" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="doAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYI-z2-qbZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aNX-uU-ixe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6dh-xR-2je"/>
+                            <constraint firstItem="zMq-fV-28K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JHu-vn-9Sb"/>
+                            <constraint firstItem="aNX-uU-ixe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KUw-Z9-lw7"/>
+                            <constraint firstItem="9qg-8e-v8e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VKm-co-PMc"/>
+                            <constraint firstItem="zMq-fV-28K" firstAttribute="top" secondItem="aNX-uU-ixe" secondAttribute="bottom" constant="34" id="aMR-wW-anb"/>
+                            <constraint firstItem="9qg-8e-v8e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qSt-1j-D3d"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="scm-AZ-94b" id="lRB-Hq-Ziy"/>
+                        <outlet property="numberScrollView" destination="aNX-uU-ixe" id="ue8-af-cme"/>
+                        <outlet property="zanView" destination="9qg-8e-v8e" id="tX7-ec-tCA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

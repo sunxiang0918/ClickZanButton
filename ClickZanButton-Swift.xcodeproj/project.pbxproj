@@ -12,6 +12,8 @@
 		A4534E6E1B5A467700EAE46A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4534E6C1B5A467700EAE46A /* Main.storyboard */; };
 		A4534E701B5A467700EAE46A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4534E6F1B5A467700EAE46A /* Assets.xcassets */; };
 		A4534E731B5A467700EAE46A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4534E711B5A467700EAE46A /* LaunchScreen.storyboard */; };
+		A4534E7D1B5A470C00EAE46A /* ZanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4534E7B1B5A470C00EAE46A /* ZanButton.swift */; };
+		A4534E7E1B5A470C00EAE46A /* NumberScrollAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4534E7C1B5A470C00EAE46A /* NumberScrollAnimatedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A4534E6F1B5A467700EAE46A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4534E721B5A467700EAE46A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4534E741B5A467700EAE46A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4534E7B1B5A470C00EAE46A /* ZanButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZanButton.swift; sourceTree = "<group>"; };
+		A4534E7C1B5A470C00EAE46A /* NumberScrollAnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberScrollAnimatedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		A4534E671B5A467700EAE46A /* ClickZanButton-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				A4534E7A1B5A46F400EAE46A /* ClickZanButton */,
 				A4534E681B5A467700EAE46A /* AppDelegate.swift */,
 				A4534E6A1B5A467700EAE46A /* ViewController.swift */,
 				A4534E6C1B5A467700EAE46A /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				A4534E741B5A467700EAE46A /* Info.plist */,
 			);
 			path = "ClickZanButton-Swift";
+			sourceTree = "<group>";
+		};
+		A4534E7A1B5A46F400EAE46A /* ClickZanButton */ = {
+			isa = PBXGroup;
+			children = (
+				A4534E7B1B5A470C00EAE46A /* ZanButton.swift */,
+				A4534E7C1B5A470C00EAE46A /* NumberScrollAnimatedView.swift */,
+			);
+			name = ClickZanButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4534E7D1B5A470C00EAE46A /* ZanButton.swift in Sources */,
 				A4534E6B1B5A467700EAE46A /* ViewController.swift in Sources */,
 				A4534E691B5A467700EAE46A /* AppDelegate.swift in Sources */,
+				A4534E7E1B5A470C00EAE46A /* NumberScrollAnimatedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
