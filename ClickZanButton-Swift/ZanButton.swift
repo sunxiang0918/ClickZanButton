@@ -83,12 +83,12 @@ class ZanButton: UIView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initBaseLayout()
+        _init()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initBaseLayout()
+        _init()
     }
     
     /**
@@ -96,7 +96,7 @@ class ZanButton: UIView{
     
     - returns:
     */
-    private func initBaseLayout(){
+    private func _init(){
         
         //设置图片
         zanImageView = UIImageView(frame: CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)))
@@ -114,7 +114,7 @@ class ZanButton: UIView{
         }
         
         //设置点击事件
-        let tapImageViewGesture = UITapGestureRecognizer(target: self, action: "zanAnimationPlay")
+        let tapImageViewGesture = UITapGestureRecognizer(target: self, action: "zanAnimationAction")
         
         zanImageView.addGestureRecognizer(tapImageViewGesture)
         
@@ -146,7 +146,7 @@ class ZanButton: UIView{
     /**
     开始执行点赞动画
     */
-    func zanAnimationPlay(){
+    func zanAnimationAction(){
         
         //点击取反
         self.isZan = !self.isZan
